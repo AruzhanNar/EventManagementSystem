@@ -1,0 +1,204 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Holiday - Locations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="{% static 'core/locations.css' %}"> 
+</head>
+<body>
+    <!-- Navigation bar and header section -->
+    <header class="header">
+        <div class="logo">
+            <h1>Happy Holiday</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="locations.html" class="active">Location</a></li>
+                <li><a href="{% url 'suppliers' %}">Suppliers</a></li>
+                <li><a href="{% url 'about_us' %}">About Us</a></li>
+                <li><a href="#cart">Cart</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            {% if user.is_authenticated %}
+                <a href="{% url 'profile' user.id %}">
+                    <img src="{% static 'core/profile.png' %}" alt="" class="profile-icon">
+                </a> 
+                <a href="{% url 'logout' %}" class="login-btn">Logout</a>
+            {% else %}
+                <a href="{% url 'signin' %}" class="login-btn">Sign in</a>
+                <a href="{% url 'signup' %}" class="signup-btn">Sign up</a>
+            {% endif %}
+        
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <h2 class="filter-title">Our Event Locations</h2>
+        <div class="filter-options">
+            <select class="filter-select location-view">
+                <option disabled selected>Location View</option>
+                <option value="sea-view">Sea View</option>
+                <option value="city-centre">City Centre</option>
+                <option value="mountain-view">Mountain View</option>
+            </select>
+            <input type="text" class="filter-date" placeholder="Select Date">
+            <input type="time" class="filter-time" placeholder="Select Time">
+            <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    flatpickr(".filter-date", {
+                        dateFormat: "Y-m-d",
+                        locale: "en" // Sets the language to English
+                    });
+                });
+            </script>
+            <select class="filter-select no-of-guests">
+                <option disabled selected>Number of Guests</option>
+                <option value="2-6">2-6 Persons</option>
+                <option value="7-15">7-15 Persons</option>
+                <option value="16-30">16-30 Persons</option>
+                <option value="30-50">30-50 Persons</option>
+            </select>
+            <select class="filter-select rating">
+                <option disabled selected>Rating</option>
+                <option value="high-to-low">Highest First</option>
+                <option value="low-to-high">Lowest First</option>
+            </select>
+            <button class="filter-search">Search</button>
+        </div>
+    </div>
+
+    <!-- Locations Section -->
+    <div class="locations-container">
+        <h1><a href="{% url 'location' %}">Locations</a></h1>
+        <div class="locations">
+            <div class="location">
+                <a href="#sea_view">
+                    <img src="{% static 'core/1st.png' %}" alt="With Sea View">
+                    <p class="view-text">with sea view</p>
+                </a>
+            </div>
+            <div class="location">
+                <a href="#city_center">
+                    <img src="{% static 'core/2nd.png' %}" alt="In the City Center">
+                    <p class="view-text">in the city center</p>
+                </a>
+            </div>
+            <div class="location">
+                <a href="#mountain_view">
+                    <img src="{% static 'core/3rd.png' %}" alt="With Mountain View">
+                    <p class="view-text">with mountain view</p>
+                </a>
+            </div>
+        </div>
+        <hr class="separator">
+    </div>
+
+    <!-- Recommendations Section -->
+    <div class="recommendations">
+        <div class="locations-container">
+            <h2>Recommended Locations with Sea View</h2>
+            <div class="locations">
+                <div class="location">
+                    <img src="{% static 'core/sea1.jpg' %}" alt="Sea View 1">
+                    <p class="location-rating">★★★★☆ <span>4.87 (22)</span></p>
+                </div>
+                <div class="location">
+                    <img src="{% static 'core/sea2.jpg' %}" alt="Sea View 2">
+                    <p class="location-rating">★★★★★ <span>5.0 (30)</span></p>
+                </div>
+                <div class="location">
+                    <img src="{% static 'core/sea3.jpg' %}" alt="Sea View 3">
+                    <p class="location-rating">★★★★☆ <span>4.92 (18)</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="locations-container">
+            <h2>Recommended Locations with Mountain View</h2>
+            <div class="locations">
+                <div class="location">
+                    <img src="{% static 'core/mountain1.jpg' %}" alt="Mountain View 1">
+                    <p class="location-rating">★★★★☆ <span>4.75 (19)</span></p>
+                </div>
+                <div class="location">
+                    <img src="{% static 'core/mountain2.jpg' %}" alt="Mountain View 2">
+                    <p class="location-rating">★★★★☆ <span>4.82 (25)</span></p>
+                </div>
+                <div class="location">
+                    <img src="{% static 'core/mountain3.jpg' %}" alt="Mountain View 3">
+                    <p class="location-rating">★★★★★ <span>4.98 (15)</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="locations-container">
+            <h2>Recommended Locations in the City Center</h2>
+            <div class="locations">
+                <div class="location">
+                    <img src="{% static 'core/city1.jpg' %}" alt="City Center 1">
+                    <p class="location-rating">★★★★☆ <span>4.68 (20)</span></p>
+                </div>
+                <div class="location">
+                    <img src="{% static 'core/city2.jpg' %}" alt="City Center 2">
+                    <p class="location-rating">★★★★★ <span>4.95 (22)</span></p>
+                </div>
+                <div class="location">
+                    <img src="{% static 'core/city3.jpg' %}" alt="City Center 3">
+                    <p class="location-rating">★★★★☆ <span>4.76 (18)</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="go-to-cart" style="margin-top: 100px;">
+        <a href="#" class="cart-link">
+            <span>Go to Cart</span>
+            <img src="{% static 'core/cart.png' %}" alt="Cart" class="icon">
+        </a>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Happy Holiday</h2>
+            </div>
+            <div class="social-media">
+                <div class="social-icon">
+                    <a href="#"><img src="{% static 'core/telegram.png' %}" alt="Telegram" class="icon"></a>
+                    <a href="#"><img src="{% static 'core/instagram.png' %}" alt="Instagram" class="icon"></a>
+                    <a href="#"><img src="{% static 'core/twitter.png' %}" alt="Twitter" class="icon"></a>
+                    <a href="#"><img src="{% static 'core/facebook.png' %}" alt="Facebook" class="icon"></a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy;2024 Happy Holiday | All Rights Reserved
+            </div>
+            <div class="contact-info">
+                <h3>Contact Details</h3>
+                <div class="info-item">
+                    <span class="icon">📍</span>
+                    <p><strong>Address:</strong> Almaty Region, Kaskelen, Abylai Khan 1/1</p>
+                </div>
+                <div class="info-item">
+                    <span class="icon">📞</span>
+                    <p><strong>Phone:</strong> +7 777 604 78 68</p>
+                </div>
+                <div class="info-item">
+                    <span class="icon">✉️</span>
+                    <p><strong>Email:</strong> 220107001@stu.sdu.edu.kz</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

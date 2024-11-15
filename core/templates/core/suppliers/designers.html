@@ -1,0 +1,181 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designers - Happy Holiday</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Header Styles */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: linear-gradient(to bottom, #e6f2ff, #66c2ff, #3399ff);
+            height: 78px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Body and Layout */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding-top: 100px; /* Adjust for the fixed header */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .back-link {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            margin-top: 20px;
+            margin-left: 20px;
+            align-self: flex-start;
+        }
+
+        .back-link:hover {
+            color: #555;
+        }
+
+        /* Main Container */
+        .designer-section {
+            display: flex;
+            width: 1500px;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .designer-image {
+            width: 40%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .designer-info {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .designer-info h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-top: 0;
+        }
+
+        .designer-info p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .sample-works {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .sample-works li {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with All Suppliers text -->
+    <header class="header">
+        <a href="{% url 'suppliers' %}" class="back-link">&larr; All Suppliers</a>
+    </header>
+
+    <!-- Aizhan Section -->
+    <div class="designer-section">
+        <img src="{% static 'core/designers/aizhan.png' %}" alt="Aizhan" class="designer-image">
+        <div class="designer-info">
+            <h2>Aizhan - Evening Wear Specialist</h2>
+            <p>Aizhan crafts luxurious, elegant evening gowns with intricate details, blending timeless style with modern touches.</p>
+            <p class="contact-info">Contact: +7 (701) 555-1010</p>
+            <h3>Sample Works:</h3>
+            <ul class="sample-works">
+                <li>Beaded gown</li>
+                <li>Satin evening dress</li>
+                <li>Lace cocktail dress</li>
+                <li>Red-carpet gown</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Timur Section -->
+    <div class="designer-section">
+        <img src="{% static 'core/designers/timur.png' %}" alt="Timur" class="designer-image">
+        <div class="designer-info">
+            <h2>Timur - Streetwear Innovator</h2>
+            <p>Timur designs bold streetwear with unique patterns and vibrant colors, perfect for making a statement.</p>
+            <p class="contact-info">Contact: +7 (701) 555-2020</p>
+            <h3>Sample Works:</h3>
+            <ul class="sample-works">
+                <li>Graffiti bomber jacket</li>
+                <li>Edgy denim</li>
+                <li>Oversized hoodie</li>
+                <li>Statement joggers</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Gulnara Section -->
+    <div class="designer-section">
+        <img src="{% static 'core/designers/gulnara.png' %}" alt="Gulnara" class="designer-image">
+        <div class="designer-info">
+            <h2>Gulnara - Bridal Wear Designer</h2>
+            <p>Gulnara specializes in custom bridal gowns that combine elegance, romance, and personal style.</p>
+            <p class="contact-info">Contact: +7 (701) 555-3030</p>
+            <h3>Sample Works:</h3>
+            <ul class="sample-works">
+                <li>Lace gown</li>
+                <li>Minimalist silk dress</li>
+                <li>Vintage-inspired wedding dress</li>
+                <li>Bridal jumpsuit</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Arman Section -->
+    <div class="designer-section">
+        <img src="{% static 'core/designers/arman.png' %}" alt="Arman" class="designer-image">
+        <div class="designer-info">
+            <h2>Arman - Avant-Garde Designer</h2>
+            <p>Arman creates high-fashion, experimental pieces, perfect for clients seeking artistic, avant-garde designs.</p>
+            <p class="contact-info">Contact: +7 (701) 555-4040</p>
+            <h3>Sample Works:</h3>
+            <ul class="sample-works">
+                <li>Sculptural dress</li>
+                <li>Statement coat</li>
+                <li>Asymmetrical separates</li>
+                <li>Layered avant-garde gown</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

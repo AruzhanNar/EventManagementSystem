@@ -1,0 +1,221 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue Planners - Happy Holiday</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Header Styles */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: linear-gradient(to bottom, #e6f2ff, #66c2ff, #3399ff);
+            height: 78px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Body and Layout */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding-top: 100px; /* Adjust for the fixed header */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .back-link {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            margin-top: 20px;
+            margin-left: 20px;
+            align-self: flex-start;
+        }
+
+        .back-link:hover {
+            color: #555;
+        }
+
+        /* Main Container */
+        .venue-planner-section {
+            display: flex;
+            width: 1500px;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .venue-planner-image {
+            width: 40%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .venue-planner-info {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .venue-planner-info h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-top: 0;
+        }
+
+        .venue-planner-info p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .reasons-list {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .reasons-list li {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .sample-works {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .sample-works li {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with All Suppliers text -->
+    <header class="header">
+        <a href="{% url 'suppliers' %}" class="back-link">&larr; All Suppliers</a>
+    </header>
+
+    <!-- Samal Section -->
+    <div class="venue-planner-section">
+        <img src="{% static 'core/venue_planners/samal.png' %}" alt="Samal" class="venue-planner-image">
+        <div class="venue-planner-info">
+            <h2>Samal - Event Layout Designer</h2>
+            <p>Samal optimizes venue spaces to ensure comfort, style, and seamless flow.</p>
+            <h3>Why Choose Samal:</h3>
+            <ul class="reasons-list">
+                <li>Efficient space use</li>
+                <li>Natural, aesthetic layouts</li>
+                <li>Detailed planning</li>
+                <li>Custom designs</li>
+            </ul>
+            <p class="contact-info">Contact: +7 (701) 555-5050</p>
+            <h3>Sample Works:</h3>
+            <ul class="sample-works">
+                <li>Wedding reception layout</li>
+                <li>Intimate family setup</li>
+                <li>Corporate seminar arrangement</li>
+                <li>Themed birthday layout</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bakyt Section -->
+    <div class="venue-planner-section">
+        <img src="{% static 'core/venue_planners/bakyt.png' %}" alt="Bakyt" class="venue-planner-image">
+        <div class="venue-planner-info">
+            <h2>Bakyt - Logistics Specialist</h2>
+            <p>Bakyt handles all event logistics, ensuring everything runs smoothly from setup to teardown.</p>
+            <h3>Why Choose Bakyt:</h3>
+            <ul class="reasons-list">
+                <li>Seamless coordination</li>
+                <li>Timely execution</li>
+                <li>Problem-solving</li>
+                <li>Reliable service</li>
+            </ul>
+            <p class="contact-info">Contact: +7 (701) 555-6060</p>
+            <h3>Sample Works:</h3>
+            <ul class="sample-works">
+                <li>Outdoor festival logistics</li>
+                <li>Corporate awards night</li>
+                <li>Multi-venue wedding</li>
+                <li>VIP event coordination</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Aigerim Section -->
+    <div class="venue-planner-section">
+        <img src="{% static 'core/venue_planners/aigerim.png' %}" alt="Aigerim" class="venue-planner-image">
+        <div class="venue-planner-info">
+            <h2>Aigerim - Theme Specialist</h2>
+            <p>Aigerim brings any theme to life, from rustic to glamorous, creating unique atmospheres.</p>
+            <h3>Why Choose Aigerim:</h3>
+            <ul class="reasons-list">
+                <li>Creative concepts</li>
+                <li>Versatile style</li>
+                <li>Client-focused</li>
+                <li>Attention to theme details</li>
+            </ul>
+            <p class="contact-info">Contact: +7 (701) 555-7070</p>
+            <h3>Sample Works:</h3>
+            <ul class="sample-works">
+                <li>Vintage wedding decor</li>
+                <li>Boho outdoor setup</li>
+                <li>Modern corporate theme</li>
+                <li>Whimsical children's birthday</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Alisher Section -->
+    <div class="venue-planner-section">
+        <img src="{% static 'core/venue_planners/alisher.png' %}" alt="Alisher" class="venue-planner-image">
+        <div class="venue-planner-info">
+            <h2>Alisher - Furniture & Decor Expert</h2>
+            <p>Alisher arranges furniture and decor to elevate the venue's style, adding a sophisticated touch.</p>
+            <h3>Why Choose Alisher:</h3>
+            <ul class="reasons-list">
+                <li>Stylish arrangements</li>
+                <li>Cohesive, elegant look</li>
+                <li>Sophisticated touch</li>
+                <li>Client satisfaction</li>
+            </ul>
+            <p class="contact-info">Contact: +7 (701) 555-8080</p>
+            <h3>Sample Works:</h3>
+            <ul class="sample-works">
+                <li>Cocktail lounge</li>
+                <li>Rustic wedding setup</li>
+                <li>VIP seating</li>
+                <li>Minimalist corporate decor</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

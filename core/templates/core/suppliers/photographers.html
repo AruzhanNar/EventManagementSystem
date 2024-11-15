@@ -1,0 +1,193 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographers - Happy Holiday</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Header Styles */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: linear-gradient(to bottom, #e6f2ff, #66c2ff, #3399ff);
+            height: 78px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Body and Layout */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding-top: 100px; /* Adjust for the fixed header */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .back-link {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            margin-top: 20px;
+            margin-left: 20px;
+            align-self: flex-start;
+        }
+
+        .back-link:hover {
+            color: #555;
+        }
+
+        .photographer-container {
+            display: flex;
+            width: 1500px;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .photographer-image {
+            width: 40%;
+            max-width: 400px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .photographer-info {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .photographer-info h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-top: 0;
+        }
+
+        .photographer-info p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .reasons-list {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .reasons-list li {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with All Suppliers text -->
+    <header class="header">
+        <a href="{% url 'suppliers' %}" class="back-link">&larr; All Suppliers</a>
+    </header>
+
+    <!-- Medina -->
+    <div class="photographer-container">
+        <img src="{% static 'core/photographers/medina.png' %}" alt="Medina" class="photographer-image">
+        <div class="photographer-info">
+            <h2>Medina - Photographer & Videographer from Almaty</h2>
+            <p>Medina is a talented photographer and videographer with a gift for capturing genuine moments. Her unique style adds life to every shot, and your photos or videos will be ready quickly—within just 5-7 days.</p>
+            <h3>Why Clients Choose Medina:</h3>
+            <ul class="reasons-list">
+                <li>Creative Eye - unique and original photos and videos.</li>
+                <li>Professional & Reliable - beautiful results in any setting.</li>
+                <li>Fast Turnaround - edited images ready in 5-7 days.</li>
+                <li>Relaxed Atmosphere - Medina helps you feel comfortable and natural.</li>
+            </ul>
+            <p class="contact-info">Call +7 (777) 123-4567 to book your session.<br>
+            <a href="https://www.instagram.com/malen_photograph?igsh=N3JvN3piODd1dnRp" target="_blank">Instagram Profile</a></p>
+        </div>
+    </div>
+
+    <!-- Nurbek -->
+    <div class="photographer-container">
+        <img src="{% static 'core/photographers/nurbek.png' %}" alt="Nurbek" class="photographer-image">
+        <div class="photographer-info">
+            <h2>Nurbek - Photographer & Videographer in Almaty and Astana</h2>
+            <p>Nurbek is a talented photographer and videographer specializing in weddings, love stories, and family moments, capturing emotions with a unique, cinematic style.</p>
+            <h3>Why Clients Choose Nurbek:</h3>
+            <ul class="reasons-list">
+                <li>Emotion-Driven - authentic, heartfelt memories.</li>
+                <li>Cinematic Quality - beautiful, film-like visuals.</li>
+                <li>Attention to Detail - every shot carefully crafted.</li>
+                <li>Comfortable Shoots - relaxed and natural atmosphere.</li>
+            </ul>
+            <p class="contact-info">Book your session with Nurbek at +7 (705) 456-7890.<br>
+            <a href="https://www.instagram.com/nurbek.hairullaev?igsh=MTh6eXNpZG9kaWZoeA==" target="_blank">Instagram Profile</a></p>
+        </div>
+    </div>
+
+    <!-- Arailym -->
+    <div class="photographer-container">
+        <img src="{% static 'core/photographers/arailym.png' %}" alt="Arailym" class="photographer-image">
+        <div class="photographer-info">
+            <h2>Arailym - Photographer & Videographer in Almaty</h2>
+            <p>Arailym is a talented photographer and videographer capturing genuine emotions with a unique style. She offers full-service shoots, including styling and outfit rentals.</p>
+            <h3>Why Choose Arailym:</h3>
+            <ul class="reasons-list">
+                <li>Creative Vision - artistic and memorable visuals.</li>
+                <li>Professional Quality - high standards in every shot.</li>
+                <li>Complete Service - styling and wardrobe available.</li>
+                <li>Comfortable Atmosphere - relaxed and natural sessions.</li>
+            </ul>
+            <p class="contact-info">Book your session with Arailym at +7 (701) 234-5678.<br>
+            <a href="https://www.instagram.com/arailymsamarkhan?igsh=NzlvcmJ3cjdmYzA=" target="_blank">Instagram Profile</a></p>
+        </div>
+    </div>
+
+    <!-- Zhannur -->
+    <div class="photographer-container">
+        <img src="{% static 'core/photographers/zhannur.png' %}" alt="Zhannur" class="photographer-image">
+        <div class="photographer-info">
+            <h2>Zhannur - Family Photographer & Videographer in Astana</h2>
+            <p>Zhannur specializes in capturing natural, heartfelt family moments in Astana. She creates a comfortable environment where clients don't need to pose, allowing for authentic emotions to shine through in both photos and videos.</p>
+            <h3>Why Clients Choose Zhannur:</h3>
+            <ul class="reasons-list">
+                <li>Natural Style - captures real, unposed moments.</li>
+                <li>Emotion-Focused - genuine and heartfelt visuals.</li>
+                <li>Comfortable Sessions - relaxed atmosphere for all ages.</li>
+                <li>Professional Quality - each shot thoughtfully composed.</li>
+            </ul>
+            <p class="contact-info">Book your session with Zhannur at +7 (702) 345-6789.<br>
+            <a href="https://www.instagram.com/zhannur_galymkyzy?igsh=MXVqMDNnd3RsYmtjNA=" target="_blank">Instagram Profile</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

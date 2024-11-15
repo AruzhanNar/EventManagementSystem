@@ -1,0 +1,181 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu / Bar - Happy Holiday</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Header Styles */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: linear-gradient(to bottom, #e6f2ff, #66c2ff, #3399ff);
+            height: 78px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Body and Layout */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding-top: 100px; /* Adjust for the fixed header */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .back-link {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            margin-top: 20px;
+            margin-left: 20px;
+            align-self: flex-start;
+        }
+
+        .back-link:hover {
+            color: #555;
+        }
+
+        /* Main Container */
+        .menu-section {
+            display: flex;
+            width: 1500px;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .menu-image {
+            width: 40%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .menu-info {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .menu-info h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-top: 0;
+        }
+
+        .menu-info p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .sample-works {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .sample-works li {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with All Suppliers text -->
+    <header class="header">
+        <a href="{% url 'suppliers' %}" class="back-link">&larr; All Suppliers</a>
+    </header>
+
+    <!-- Ainur Section -->
+    <div class="menu-section">
+        <img src="{% static 'core/menu_bar/ainur.png' %}" alt="Ainur" class="menu-image">
+        <div class="menu-info">
+            <h2>Ainur - Cocktail Specialist</h2>
+            <p>Ainur creates unique, visually stunning cocktails that blend classic and modern flavors.</p>
+            <p class="contact-info">Contact: +7 (701) 555-1010</p>
+            <h3>Sample Works:</h3>
+            <ul class="sample-works">
+                <li>Tropical cocktail</li>
+                <li>Herbal martini</li>
+                <li>Layered drink</li>
+                <li>Signature spiced cocktail</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Rustam Section -->
+    <div class="menu-section">
+        <img src="{% static 'core/menu_bar/rustam.png' %}" alt="Rustam" class="menu-image">
+        <div class="menu-info">
+            <h2>Rustam - Fine Dining Menu Designer</h2>
+            <p>Rustam designs refined, gourmet menus for high-end restaurants, focusing on luxury ingredients and elegant presentation.</p>
+            <p class="contact-info">Contact: +7 (701) 555-2020</p>
+            <h3>Sample Works:</h3>
+            <ul class="sample-works">
+                <li>Seafood plate</li>
+                <li>Herb appetizer</li>
+                <li>Chocolate dessert</li>
+                <li>Fusion main course</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Gulzat Section -->
+    <div class="menu-section">
+        <img src="{% static 'core/menu_bar/gulzat.png' %}" alt="Gulzat" class="menu-image">
+        <div class="menu-info">
+            <h2>Gulzat - Casual Restaurant Menu Designer</h2>
+            <p>Gulzat brings comfort and flavor to casual dining, creating tasty, accessible dishes for everyone.</p>
+            <p class="contact-info">Contact: +7 (701) 555-3030</p>
+            <h3>Sample Works:</h3>
+            <ul class="sample-works">
+                <li>Gourmet burger</li>
+                <li>Fresh pasta</li>
+                <li>Appetizer platter</li>
+                <li>Seasonal salad</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Arman Section -->
+    <div class="menu-section">
+        <img src="{% static 'core/menu_bar/arman.png' %}" alt="Arman" class="menu-image">
+        <div class="menu-info">
+            <h2>Arman - Event Mixologist</h2>
+            <p>Arman specializes in custom drink menus for events, from creative cocktails to vibrant mocktails.</p>
+            <p class="contact-info">Contact: +7 (701) 555-4040</p>
+            <h3>Sample Works:</h3>
+            <ul class="sample-works">
+                <li>Tropical mocktail</li>
+                <li>Fiery cocktail</li>
+                <li>Fruit spritz</li>
+                <li>Wedding drink station</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

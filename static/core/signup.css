@@ -82,7 +82,7 @@ body {
     position: relative;
     width: 100%;
     padding: 15px 20px 15px 20px;
-    font-size: 1vw;
+    font-size: 14px;
     border: 1px solid #d8d6d6;
     border-radius: 10px;
     outline: none;
@@ -103,7 +103,7 @@ body {
 
 #signupForm{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     column-gap: 10px;
 }
 #signupForm .btn {
@@ -141,7 +141,7 @@ body {
 }
 p.error{
     color: red !important;
-    font-size: 9px !important;
+    font-size: 16px !important;
     padding: 2px 5px !important;
 }
 
@@ -229,7 +229,8 @@ p.signin-link{
     color: red;
 }
 
-.error {
+p.error {
+    font-size: 20px;
     color: red;  /* Красный цвет для сообщений об ошибках */
 }
 

@@ -1,0 +1,159 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choreographers - Happy Holiday</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Header Styles */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: linear-gradient(to bottom, #e6f2ff, #66c2ff, #3399ff);
+            height: 78px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Body and Layout */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding-top: 100px; /* Adjust for the fixed header */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .back-link {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            margin-top: 20px;
+            margin-left: 20px;
+            align-self: flex-start;
+        }
+
+        .back-link:hover {
+            color: #555;
+        }
+
+        /* Main Container */
+        .choreographer-section {
+            display: flex;
+            width: 1500px;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .choreographer-image {
+            width: 40%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .choreographer-info {
+            flex: 1;
+            padding-left: 20px;
+            margin-top: 20px;
+        }
+
+        .choreographer-info h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-top: 0;
+        }
+
+        .choreographer-info p {
+            font-size: 1.5rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with All Suppliers text -->
+    <header class="header">
+        <a href="{% url 'suppliers' %}" class="back-link">&larr; All Suppliers</a>
+    </header>
+
+    <!-- Zhanel Section -->
+    <div class="choreographer-section">
+        <img src="{% static 'core/dance/zhanel.png' %}" alt="Zhanel" class="choreographer-image">
+        <div class="choreographer-info">
+            <h2>Zhanel (@zhanelzh)</h2>
+            <p>Zhanel is a choreographer with a unique style and vibrant performances.<br>
+               Specializing in high heels dance, she conducts classes in Almaty. <br>
+               Zhanel will help you feel confident on the dance floor and improve your technique.</p>
+            <p class="contact-info">Contact: +7 (701) 123-4567 | Instagram <a href="https://www.instagram.com/zhanelzh?igsh=cmJtMmlxaHkyMm9w" target="_blank">@zhanelzh</a></p>
+        </div>
+    </div>
+
+    <!-- Madina Section -->
+    <div class="choreographer-section">
+        <img src="{% static 'core/dance/madina.png' %}" alt="Madina" class="choreographer-image">
+        <div class="choreographer-info">
+            <h2>Madina Toyzhanovna (@toyzhanova_madina)</h2>
+            <p>Madina is an experienced choreographer and dancer who offers <br>
+             both group and private classes in Almaty. <br>
+             Her style combines artistry and technique, making each training session productive and inspiring.</p>
+            <p class="contact-info">Contact: +7 (701) 234-5678 | Instagram <a href="https://www.instagram.com/toyzhanova_madina?igsh=OHk1cDRydDc0NTVx" target="_blank">@toyzhanova_madina</a></p>
+        </div>
+    </div>
+
+    <!-- Jey Pan Section -->
+    <div class="choreographer-section">
+        <img src="{% static 'core/dance/jey.png' %}" alt="Jey Pan" class="choreographer-image">
+        <div class="choreographer-info">
+            <h2>Jey Pan (@jey.pan)</h2>
+            <p>Jey Pan is a choreographer and mentor who inspires students<br>
+                 to express themselves creatively. <br>
+                 In addition to dancing, he helps create videos and scripts for unique projects.</p>
+            <p class="contact-info">Contact: WhatsApp +7 (775) 960-85-93 | Instagram <a href="https://www.instagram.com/jey.pan?igsh=amZvM2g4N2Uxdno0" target="_blank">@jey.pan</a></p>
+        </div>
+    </div>
+
+    <!-- Shahin Ve Section -->
+    <div class="choreographer-section">
+        <img src="{% static 'core/dance/shanin.png' %}" alt="Shahin Ve" class="choreographer-image">
+        <div class="choreographer-info">
+            <h2>Shahin Ve (@shahin.ve)</h2>
+            <p>Shahin is a professional choreographer and dancer who speaks five languages.<br>
+                 He conducts high heels classes in Almaty, teaches dance, and offers English lessons,<br>
+                  creating a welcoming atmosphere in his sessions.</p>
+            <p class="contact-info">Contact: +7 (701) 345-6789 | Telegram @shahinclass | Instagram <a href="https://www.instagram.com/shahin.ve?igsh=NXE0aDczZzkwYTBl" target="_blank">@shahin.ve</a></p>
+        </div>
+    </div>
+</body>
+</html>

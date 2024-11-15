@@ -1,0 +1,418 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Main font for the body */
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100vh;
+    overflow-x: hidden;
+    padding-top: 100px;
+}
+
+/* Header and navigation bar */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background: linear-gradient(to bottom, #e6f2ff, #66c2ff, #3399ff);
+    height: 100px;
+    position: fixed; /* Fixes the header to the top of the viewport */
+    top: 0; /* Aligns the header to the top */
+    left: 0;
+    width: 100%; /* Ensures the header spans the full width of the page */
+    z-index: 1000; /* Ensures the header stays on top of other elements */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for a raised effect */
+}
+
+.header .logo h1 {
+    font-family: 'Brush Script MT', cursive;
+    letter-spacing: 0.03em; 
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85); 
+    font-size: 3.5rem;
+    margin-bottom: -25px;
+}
+
+/* Navigation menu */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 35px;
+    align-items: flex-end; /* Aligns the nav items closer to the bottom */
+    margin-right: -300px;
+    margin-bottom: -170px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: black;
+    padding-bottom: 10px; /* Brings the text closer to the bottom */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: black;
+    text-decoration: underline;
+}
+
+/* Authentication buttons: LOGIN and SIGNUP */
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.login-btn,
+.signup-btn {
+    text-decoration: none;
+    padding: 15px 10px;
+    font-weight: bold;
+    color: white;
+    background-color: #2585e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better effect */
+    border: 2px solid transparent;
+    width: 10rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-bottom: -5px;
+}
+
+.auth-buttons .signup-btn {
+    background-color: white;
+    color: #3399ff;
+    border-color: #3399ff;
+}
+
+.auth-buttons .login-btn:hover,
+.auth-buttons .signup-btn:hover {
+    background-color: #0056b3;
+    color: white;
+    border-color: #0056b3;
+}
+
+/* Search icon */
+.auth-buttons .search-icon {
+    font-size: 1.5rem;
+    color: black;
+    cursor: pointer;
+    padding-bottom: 10px; /* Align search icon closer to the bottom */
+}
+
+.profile-icon {
+    width: 50px;
+    color: black;
+    margin-right: 10px;
+    margin-bottom: -10px;
+}
+
+/* Hero section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+    font-size: 3rem;
+    color: #000000;
+    text-align: center;
+    max-width: 70%;
+    margin: 40px;
+    margin-top: 100px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px;
+        height: auto; /* Let height adjust for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Hero Section -2  */
+.hero-section2 {
+    background: linear-gradient(to bottom, #cfe7ff, #36a3f1);
+    text-align: center;
+    padding: 60px 20px;
+}
+.hero-section2 h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 5rem;
+    color: #ffffff;
+    font-weight: 100;
+}
+.hero-section2 p {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 4rem;
+    color: #ffffff;
+    font-style: italic;
+}
+
+.main-content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section {
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    margin-left: 200px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.content p {
+    flex: 1;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    text-align: left;
+    margin-left: 180px;
+
+}
+
+.image-placeholder {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-placeholder img {
+    max-width: 100%;
+    height: auto;
+    width: 70%; /* Adjust image width to make it larger */
+    object-fit: cover;
+    margin-right: 100px;
+    margin-top: -80px;
+    margin-bottom: 50px;
+}
+
+
+.section2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section2 h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: right;
+    margin-right: 200px;
+    margin-top: -430px;
+}
+
+.content2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.content2 p {
+    flex: 1;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    text-align: right;
+    margin-right: 100px;
+
+}
+
+.image-placeholder2 {
+    flex: 1;
+    display: flex;
+    margin-top: 250px;
+}
+
+.image-placeholder2 img {
+    max-width: 100%;
+    height: auto;
+    width: 30%; /* Adjust image width to make it larger */
+    object-fit: cover;
+    margin-left: 180px;
+    margin-top: -80px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .container { /* Apply this to the parent container if it exists */
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .content p {
+        margin-right: 0;
+        text-align: center;
+    }
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #e0f7fa, #00aaff); /* Gradient effect */
+    width: 100vw; /* Make it stretch across the entire viewport width */
+    margin: 0 auto;
+    overflow: hidden; /* Ensure no unwanted scroll bars appear */
+    box-sizing: border-box; /* Include padding in total width */
+    margin-left: -90px;
+}
+
+
+.stat-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    color: #000; /* Text color */
+}
+
+.stat-item p {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+}
+
+
+/* Go to Cart Section */
+.go-to-cart {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    max-width: 120%; /* Removes restriction */
+    box-sizing: border-box;
+    margin-right: -100px;
+}
+
+.cart-link {
+    text-decoration: none;
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-left: -1400px;
+    gap: 15px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    color: #333;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; /* Full viewport width */
+    max-width: 120%; /* Removes restriction */
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: -100px;
+    margin-right: -250px;
+}
+
+.footer-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px; /* Optional max-width for inner content */
+}
+
+.footer-logo h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    margin-left: -250px;
+    flex-grow: 1;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: -50px;
+    color: #ddd;
+}
+
+img.icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Copyright */
+.footer .copyright {
+    font-size: 1.2rem;
+    color: #bbb;
+    text-align: center;
+    margin-top: 140px;
+}
+
+.contact-info {
+    width: 50%;
+    margin-right: -250px;
+}
+
+.contact-info h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #666;
+}
+
+.info-item .icon {
+    font-size: 1.1rem;
+    margin-right: 15px;
+}

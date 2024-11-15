@@ -1,0 +1,193 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decorators - Happy Holiday</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Header Styles */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: linear-gradient(to bottom, #e6f2ff, #66c2ff, #3399ff);
+            height: 78px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Body and Layout */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding-top: 100px; /* Adjust for the fixed header */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .back-link {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            margin-top: 20px;
+            margin-left: 20px;
+            align-self: flex-start;
+        }
+
+        .back-link:hover {
+            color: #555;
+        }
+
+        .decorator-container {
+            display: flex;
+            width: 1500px;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .decorator-image {
+            width: 40%;
+            max-width: 400px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .decorator-info {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .decorator-info h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-top: 0;
+        }
+
+        .decorator-info p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .reasons-list {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .reasons-list li {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with All Suppliers text -->
+    <header class="header">
+        <a href="{% url 'suppliers' %}" class="back-link">&larr; All Suppliers</a>
+    </header>
+
+    <!-- Aisulu -->
+    <div class="decorator-container">
+        <img src="{% static 'core/decorators/aisulu.png' %}" alt="Aisulu" class="decorator-image">
+        <div class="decorator-info">
+            <h2>Aisulu - Floral Designer</h2>
+            <p>Aisulu creates elegant floral arrangements that add a sophisticated touch to any event.</p>
+            <h3>Why Choose Aisulu:</h3>
+            <ul class="reasons-list">
+                <li>Unique and stylish flower arrangements</li>
+                <li>Fresh, natural designs</li>
+                <li>Attention to detail</li>
+                <li>Efficient setup</li>
+            </ul>
+            <p class="contact-info">Contact: +7 (701) 555-1010<br>
+            Sample Works: Wedding arches, seasonal centerpieces, event bouquets, minimalist floral decor.</p>
+        </div>
+    </div>
+
+    <!-- Dauren -->
+    <div class="decorator-container">
+        <img src="{% static 'core/decorators/dauren.png' %}" alt="Dauren" class="decorator-image">
+        <div class="decorator-info">
+            <h2>Dauren - Lighting Specialist</h2>
+            <p>Dauren sets the mood with creative lighting setups, making every event feel magical.</p>
+            <h3>Why Choose Dauren:</h3>
+            <ul class="reasons-list">
+                <li>Creates unique atmospheres</li>
+                <li>Professional and precise setup</li>
+                <li>Custom lighting for themes</li>
+                <li>Reliable and punctual</li>
+            </ul>
+            <p class="contact-info">Contact: +7 (701) 555-2020<br>
+            Sample Works: Fairy lights, chandeliers, ambient lighting, LED setups.</p>
+        </div>
+    </div>
+
+    <!-- Aigerim -->
+    <div class="decorator-container">
+        <img src="{% static 'core/decorators/aigerim.png' %}" alt="Aigerim" class="decorator-image">
+        <div class="decorator-info">
+            <h2>Aigerim - Table & Venue Stylist</h2>
+            <p>Aigerim's tablescapes and venue decor bring elegance and cohesion to any space.</p>
+            <h3>Why Choose Aigerim:</h3>
+            <ul class="reasons-list">
+                <li>Elegant, curated setups</li>
+                <li>Theme-coordinated decor</li>
+                <li>Meticulous attention to detail</li>
+                <li>Client-focused approach</li>
+            </ul>
+            <p class="contact-info">Contact: +7 (701) 555-3030<br>
+            Sample Works: Wedding tablescapes, rustic decor, corporate setups, kids' party decor.</p>
+        </div>
+    </div>
+
+    <!-- Marat -->
+    <div class="decorator-container">
+        <img src="{% static 'core/decorators/marat.png' %}" alt="Marat" class="decorator-image">
+        <div class="decorator-info">
+            <h2>Marat - Backdrop & Staging Expert</h2>
+            <p>Marat's bold backdrops and stage setups add a focal point and elevate event photos.</p>
+            <h3>Why Choose Marat:</h3>
+            <ul class="reasons-list">
+                <li>Eye-catching designs</li>
+                <li>Customizable staging</li>
+                <li>Photo-ready backdrops</li>
+                <li>Fast and dependable setup</li>
+            </ul>
+            <p class="contact-info">Contact: +7 (701) 555-4040<br>
+            Sample Works: Floral walls, geometric stages, playful birthday setups, minimalist luxury designs.</p>
+        </div>
+    </div>
+
+</body>
+</html>
